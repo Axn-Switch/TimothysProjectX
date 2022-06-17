@@ -1,4 +1,4 @@
-# funlympics2023
+# Funlympics2023
 
 ## Project setup
 ```
