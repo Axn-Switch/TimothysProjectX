@@ -9,7 +9,7 @@
         <div>
             <p>Watch the FunLympic Games Online</p>
             <div>
-				<router-link to="/login" id="login" class="button">Login</router-link> |
+				<router-link to="/login" id="Login" class="button">Login</router-link>
 				<router-link to="/signup" id="Signup" class="button">Signup</router-link>
              
             </div>
@@ -93,9 +93,10 @@ a{
     font-size: 60px;
     font-weight: 400;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 30px;
 	text-align: left;
+	line-height: 1.1;
 }
 
 #content-box {
