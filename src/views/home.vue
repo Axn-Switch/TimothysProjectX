@@ -1,183 +1,98 @@
-
-
 <template>
-       <div id="ap">
-             <p>
-        FunLympics 2023
-    </p>
-    <div id='content-box'>
-        <div>
-            <p>Watch the FunLympic Games Online</p>
-            <div>
-				<router-link to="/login" id="login" class="button">Login</router-link> |
-				<router-link to="/signup" id="Signup" class="button">Signup</router-link>
-             
-            </div>
-            <div id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus 
-                at velit volutpat, sollicitudin semper tortor finibus. Pellentesque vitae ni</div>
-        </div>
-    </div>
-    <img src="../assets/Untitled.png">
-
-    <div id="modal">
-        <form id="loginform" class="formgroup" runat="server">
-            <div class="exit" onclick="closeModal()">X</div>
-            <input type="text" placeholder="username" id="usernolog">
-            <input type="password" placeholder="password" id="userpasslog">
-            <button ID="loginsubmit" Class="button"  Text="login" OnClick="loginsubmit_Click"></button>
-        <a href="">forgotten password?</a>
-        </form>
-    </div>
-       </div>
+	<div class="container">
+		<div class="content-box">
+			<div>
+				<p>
+					start streaming the
+					<span class="title">FunLympic Games </span>
+				</p>
+				<div class="links">
+					<router-link to="/login" class="login">Login</router-link>
+					<router-link to="/signup" class="signup">Signup</router-link>
+				</div>
+				<div class="content">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur
+					tellus at velit volutpat, sollicitudin semper tortor finibus. Pellentesque
+					vitae ni
+				</div>
+			</div>
+		</div>
+		<img src="../assets/Untitled.png" />
+	</div>
 </template>
 
 <style scoped>
-	html, body {
-    margin: 0;
-    font-family: Roboto;
+.container {
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(148, 13, 148, 0.21);
 }
 
-#ap {
-    display: flex;
-    height: 100vh;
-    width: 100%;
+.container p {
+	box-sizing: border-box;
+	font-size: 30px;
+	font-weight: bold;
+	width: 90%;
+	text-align: center;
 }
-#loginform{
-    text-align: center;
-    padding-bottom: 70px;
-    width: 25%;
-    margin: auto;
-   
-}
-input {
-    margin: auto;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 200px;
-    padding: 5px 10px 5px 10px;
-}
-a{
-   list-style-type: none;
-   text-decoration: none;
-}
-    #ap > p {
-        position: absolute;
-        left: 120px;
-    }
-
-
-#notification {
-    position: fixed;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #182836;
-    padding: 15px 25px 15px 25px;
-    color: white;
-}
-#adlogin {
-    background-color: white;
-    border-radius: 7px;
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-    position: absolute;
-    top: 16px;
-    right: 2%;
-    text-align: center;
-    display: flex;
+.content-box {
+	padding: 50px 150px 50px 150px;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 120px;
+	border-left: 3px dashed black;
+	justify-content: center;
 }
 
-#ap > div > div > p {
-    font-size: 60px;
-    font-weight: 400;
-    width: 90%;
-    margin-top: 20px;
-    margin-bottom: 30px;
-	text-align: left;
+.title {
+	color: #fff;
+	letter-spacing: 2px;
+	font-size: 60px;
+}
+.links {
+	padding: 10px;
+	margin-top: 10px;
 }
 
-#content-box {
-    padding: 50px 150px 50px 150px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 120px;
-    border-left: 2px solid black;
-    justify-content: center;
+.links .login {
+	background: rgba(0, 0, 255, 0.532);
+	letter-spacing: 2px;
+	padding: 10px 40px;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+	margin-right: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.links .signup {
+	background: rgba(255, 0, 0, 0.489);
+	letter-spacing: 2px;
+	padding: 10px 40px;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-    #content-box > div > div:first-of-type {
-        display: flex;
-        width: 70%;
-        margin-left: 2px;
-        font-size: 1.4rem;
-        margin-bottom: 27px;
-    }
-
-.button {
-    border: none;
-    padding: 15px 35px 15px 35px;
-    background-color: blue;
-    border-radius: 7px;
-    color: white
+.links .login:hover {
+	background-color: blue;
 }
 
-#Signup {
-    background-color: #4B88A2;
+.links .signup:hover {
+	background-color: red;
 }
 
-#Login {
-    background-color: #BB0A21;
-    margin-right: 10%;
+.content {
+	margin-top: 20px;
+	text-align: center;
+	color: #999;
 }
-
 img {
-    display: flex;
-    margin-left: auto;
-}
-
-.button:hover {
-    cursor: pointer;
-}
-
-
-#modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100VH;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    display: none;
-}
-
-.formgroup {
-    background-color: white;
-    width: 40%;
-    margin: auto;
-    height: 150px;
-    padding: 50px 25px 50px 25px;
-}
-
-.exit {
-    padding: 5px 8px;
-    background-color: red;
-    color: white;
-    position: relative;
-    top: -30px;
-    left: 97%;
-    display: flex;
-    width: fit-content;
-    font-size: 0.8em;
-}
-
-    .exit:hover {
-        cursor: pointer;
-    }
-
-#content{
-	text-align: left;
+	display: flex;
 }
 </style>
