@@ -23,6 +23,15 @@
 					/>
 					<i class="uil uil-lock"></i>
 				</div>
+				<div class="input-field">
+					<input
+						type="password"
+						placeholder=" confirm password"
+						v-model="confirmPassword"
+						required
+					/>
+					<i class="uil uil-lock"></i>
+				</div>
 
 				<div class="button">
 					<button type="submit">create account</button>
@@ -40,6 +49,7 @@ export default {
 			username: "",
 			email: "",
 			password: "",
+			confirmPassword: "",
 		};
 	},
 	methods: {
@@ -57,11 +67,10 @@ export default {
 	justify-content: center;
 	align-items: center;
 	width: 400px;
-	height: 350px;
 	border: 1px solid rgba(128, 128, 128, 0.286);
 	position: absolute;
 	left: 35%;
-	transform: translateY(70%);
+	transform: translateY(50%);
 	box-shadow: 1px 3px 3px 0 rgba(153, 153, 153, 0.444);
 }
 .forms {
@@ -73,7 +82,7 @@ export default {
 	text-transform: uppercase;
 }
 .input-field {
-	margin-top: 20px;
+	margin-top: 25px;
 	position: relative;
 	width: 300px;
 	height: 40px;
@@ -85,7 +94,7 @@ export default {
 	padding: 0 30px;
 	border: none;
 	outline: none;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.456);
 	font-size: 14px;
 	background: transparent;
 }
@@ -105,7 +114,8 @@ export default {
 	font-size: 20px;
 }
 .button {
-	margin-top: 20px;
+	margin-top: 25px;
+	margin-bottom: 20px;
 }
 
 .button button {
