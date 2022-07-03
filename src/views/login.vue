@@ -75,7 +75,8 @@ export default {
 .input-field input {
 	height: 100%;
 	width: 100%;
-	padding: 0 30px;
+	padding: 0 0 0 30px;
+	margin-right: 30px;
 	border: none;
 	outline: none;
 	border-bottom: 1px solid #000;

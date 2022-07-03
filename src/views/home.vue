@@ -10,7 +10,6 @@
             <div>
 				<router-link to="/login" id="Login" class="button">Login</router-link>
 				<router-link to="/signup" id="Signup" class="button">Signup</router-link>
-             
             </div>
             <div id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus 
                 at velit volutpat, sollicitudin semper tortor finibus. Pellentesque vitae ni</div>
@@ -137,5 +136,8 @@ img {
 
 #modal{
     display: none;
+}
+#content{
+    text-align: left;   
 }
 </style>

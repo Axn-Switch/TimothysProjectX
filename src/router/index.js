@@ -3,6 +3,7 @@ import home from "@/views/home";
 import signup from "@/views/signup";
 import login from "@/views/login";
 import notfound from "@/views/Notfound";
+import adlogin from "@/Admin/views/securelogin";
 
 const routes = [
 	{
@@ -19,6 +20,11 @@ const routes = [
 		path: "/signup",
 		name: "signup",
 		component: signup,
+	},
+	{
+		path: "/securelogin",
+		name: "securelogin",
+		component: adlogin,
 	},
 	// catch all unregistered routes
 	{
