@@ -23,7 +23,6 @@
 				</div>
 			</form>
 		</div>
->>>>>>> 5c7a9f4ceee38161e0f1f2bf9b9a57a6d3edaa1c
 	</div>
 </template>
 
