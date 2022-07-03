@@ -134,4 +134,8 @@ a{
 img {
 	display: flex;
 }
+
+#modal{
+    display: none;
+}
 </style>

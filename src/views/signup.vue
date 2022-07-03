@@ -1,10 +1,10 @@
 <template>
 	<div class="container">
 		<div class="forms">
-			<span class="logo">logo</span>
+			<span class="logo">Funlympics2023</span>
 			<form @submit.prevent.trim="login">
 				<div class="input-field">
-					<input type="text" placeholder=" username" v-model="username" required />
+					<input type="text" placeholder="username" v-model="username" required />
 
 					<i class="uil uil-user"></i>
 				</div>
@@ -17,7 +17,7 @@
 				<div class="input-field">
 					<input
 						type="password"
-						placeholder=" password"
+						placeholder="password"
 						v-model="password"
 						required
 					/>
@@ -26,7 +26,7 @@
 				<div class="input-field">
 					<input
 						type="password"
-						placeholder=" confirm password"
+						placeholder="confirm password"
 						v-model="confirmPassword"
 						required
 					/>
@@ -79,7 +79,6 @@ export default {
 .logo {
 	font-size: 20px;
 	letter-spacing: 2px;
-	text-transform: uppercase;
 }
 .input-field {
 	margin-top: 25px;
