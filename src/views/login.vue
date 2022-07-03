@@ -1,5 +1,9 @@
 <template>
 	<div>
-		<h2>login page</h2>
+		<form>
+			<label for="email">Email</label>
+			<input type="text" id="email">
+			<label></label>
+		</form>
 	</div>
 </template>
