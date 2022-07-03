@@ -131,53 +131,7 @@ a{
     background-color: #BB0A21;
     margin-right: 10%;
 }
-
 img {
-    display: flex;
-    margin-left: auto;
-}
-
-.button:hover {
-    cursor: pointer;
-}
-
-
-#modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100VH;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    display: none;
-}
-
-.formgroup {
-    background-color: white;
-    width: 40%;
-    margin: auto;
-    height: 150px;
-    padding: 50px 25px 50px 25px;
-}
-
-.exit {
-    padding: 5px 8px;
-    background-color: red;
-    color: white;
-    position: relative;
-    top: -30px;
-    left: 97%;
-    display: flex;
-    width: fit-content;
-    font-size: 0.8em;
-}
-
-    .exit:hover {
-        cursor: pointer;
-    }
-
-#content{
-	text-align: left;
+	display: flex;
 }
 </style>
