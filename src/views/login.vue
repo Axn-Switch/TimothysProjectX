@@ -1,12 +1,4 @@
 <template>
-<<<<<<< HEAD
-	<div>
-		<form>
-			<label for="email">Email</label>
-			<input type="text" id="email">
-			<label></label>
-		</form>
-=======
 	<div class="container">
 		<div class="forms">
 			<span class="logo">logo</span>
