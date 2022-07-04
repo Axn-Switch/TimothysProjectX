@@ -1,23 +1,5 @@
 <template>
-	<div class="container">
-		<div class="content-box">
-			<div>
-				<p>
-					start streaming the
-					<span class="title">FunLympic Games </span>
-				</p>
-				<div class="links">
-					<router-link to="/login" class="login">Login</router-link>
-					<router-link to="/signup" class="signup">Signup</router-link>
-				</div>
-				<div class="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus at
-					velit volutpat, sollicitudin semper tortor finibus. Pellentesque vitae ni
-				</div>
-			</div>
-		</div>
-		<img src="../assets/Untitled.png" alt="#background image" />
-	</div>
+
 </template>
 
 <style scoped>
@@ -88,12 +70,5 @@
 		background-color: red;
 	}
 
-	.content {
-		margin-top: 20px;
-		text-align: center;
-		color: #999;
-	}
-	img {
-		display: flex;
-	}
+
 </style>
