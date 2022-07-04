@@ -49,7 +49,7 @@
 	}
 
 	.info-box div {
-		background-color: rgba(128, 128, 128, 0.684);
+		background-color: rgba(128, 128, 128, 0.407);
 		width: 350px;
 		height: 200px;
 		margin: 20px;
