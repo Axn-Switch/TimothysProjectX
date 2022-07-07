@@ -3,6 +3,7 @@ import home from '@/views/home'
 import login from '@/views/login'
 import signup from '@/views/signup'
 import notfound from '@/views/notFound'
+import broadcasts from '@/views/broadcasts'
 
 const routes = [
 	{
@@ -20,7 +21,11 @@ const routes = [
 		name: 'signup',
 		component: signup,
 	},
-
+	{
+		path: '/account/broadcasts',
+		name: 'broadcasts',
+		component: broadcasts,
+	},
 	// catch all unregistered routes
 	{
 		path: '/:pathMatch(.*)*',
