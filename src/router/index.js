@@ -1,3 +1,9 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import home from '@/views/home'
+import login from '@/views/login'
+import signup from '@/views/signup'
+import notfound from '@/views/notFound'
+import broadcasts from '@/views/broadcasts'
 
 const routes = [
 	{
@@ -16,7 +22,10 @@ const routes = [
 		component: signup,
 	},
 	{
-
+		path: '/account/broadcasts',
+		name: 'broadcasts',
+		component: broadcasts,
+	},
 	// catch all unregistered routes
 	{
 		path: '/:pathMatch(.*)*',
