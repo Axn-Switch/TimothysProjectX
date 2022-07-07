@@ -4,7 +4,7 @@
 			<div>
 				<p>
 					start streaming the
-					<span class="title">FunLympic Games </span>
+					<span class="title">FunLympic</span> <span class="title-2"> Games </span>
 				</p>
 				<div class="links">
 					<router-link to="/login" class="login">Login</router-link>
@@ -21,20 +21,24 @@
 </template>
 
 <style scoped>
+	.title-2 {
+		color: rgba(255, 255, 0, 0.67);
+	}
 	.container {
 		display: flex;
 		height: 100vh;
 		width: 100%;
-		background-color: rgba(148, 13, 148, 0.21);
+		background-color: #3d226dd4;
 	}
 	.container p {
 		box-sizing: border-box;
-		font-size: 30px;
+		font-size: 20px;
+		color: rgba(255, 255, 0, 0.648);
 		font-weight: bold;
 		width: 90%;
 		text-align: center;
 		letter-spacing: 2px;
-		text-transform: capitalize;
+		text-transform: uppercase;
 	}
 	.content-box {
 		padding: 50px 150px 50px 150px;
@@ -42,16 +46,17 @@
 		margin-bottom: auto;
 		margin-left: 120px;
 		border-left: 3px dashed black;
-		justify-content: center;
 	}
 	.title {
 		color: #fff;
 		letter-spacing: 2px;
 		font-size: 50px;
+		text-transform: uppercase;
 	}
 	.links {
 		padding: 10px;
 		margin-top: 10px;
+		margin-left: 10%;
 	}
 	.links .login {
 		background: rgba(0, 0, 255, 0.532);
