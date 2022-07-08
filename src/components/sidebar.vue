@@ -18,6 +18,7 @@
 	.sidebar {
 		background: #141260;
 		width: 300px;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		text-align: center;
