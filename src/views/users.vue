@@ -25,7 +25,7 @@
 		flex-direction: column;
 	}
 	.heading p {
-		margin-left: -19rem;
+		margin-left: -17rem;
 		position: inherit;
 		font-size: 18px;
 		text-transform: uppercase;

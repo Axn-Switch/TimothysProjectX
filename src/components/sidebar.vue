@@ -4,8 +4,8 @@
 			<i class="uil uil-anchor"></i>
 		</div>
 		<ul>
-			<li>users</li>
-			<li>broadcasts</li>
+			<li><router-link to="/account/users">users</router-link></li>
+			<li><router-link to="/account/broadcasts">broadcasts</router-link></li>
 			<li>metrics</li>
 		</ul>
 		<div class="logout">
@@ -17,7 +17,7 @@
 <style scoped>
 	.sidebar {
 		background: #141260;
-		width: 300px;
+		min-width: 300px;
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
@@ -47,14 +47,18 @@
 		font-weight: bold;
 	}
 
-	li:hover {
-		background-color: #fff;
-		color: #000;
+	li a:hover {
+		color: orange;
 	}
 
-	li:active {
-		background-color: #fff;
-		color: #000;
+	li a {
+		background: transparent;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	li a.router-link-active {
+		color: orange;
 	}
 
 	.logout {
