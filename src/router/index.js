@@ -4,6 +4,7 @@ import login from '@/views/login'
 import signup from '@/views/signup'
 import notfound from '@/views/Notfound'
 import broadcasts from '@/views/broadcasts'
+import users from '@/views/users'
 
 const routes = [
 	{
@@ -25,6 +26,11 @@ const routes = [
 		path: '/account/broadcasts',
 		name: 'broadcasts',
 		component: broadcasts,
+	},
+	{
+		path: '/account/users',
+		name: 'users',
+		component: users,
 	},
 	// catch all unregistered routes
 	{
