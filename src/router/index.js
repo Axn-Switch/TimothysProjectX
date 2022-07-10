@@ -5,6 +5,8 @@ import signup from '@/views/signup'
 import notfound from '@/views/notFound'
 import broadcasts from '@/views/broadcasts'
 import users from '@/views/users'
+import metrics from '@/views/metrics'
+import addBroadcast from '@/components/popup'
 
 const routes = [
 	{
@@ -31,6 +33,17 @@ const routes = [
 		path: '/account/users',
 		name: 'users',
 		component: users,
+	},
+
+	{
+		path: '/account/metrics',
+		name: 'metrics',
+		component: metrics,
+	},
+	{
+		path: '/account/addBroadcast',
+		name: 'addBroadcast',
+		component: addBroadcast,
 	},
 	// catch all unregistered routes
 	{
