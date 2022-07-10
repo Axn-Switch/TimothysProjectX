@@ -4,7 +4,6 @@
 		<div class="main-content">
 			<div class="add-broadcast">
 				<i class="uil uil-plus"></i>
-				<!-- <router-link to="/account/addBroadcast" class="button" >add broadcast</router-link> -->
 				<button :disabled="popups" @click="popups = true">add broadcast</button>
 			</div>
 			<div class="content">
