@@ -6,7 +6,7 @@
 		<ul>
 			<li><router-link to="/account/users">users</router-link></li>
 			<li><router-link to="/account/broadcasts">broadcasts</router-link></li>
-			<li>metrics</li>
+			<li><router-link to="/account/metrics">metrics</router-link></li>
 		</ul>
 		<div class="logout">
 			<button>Logout</button>

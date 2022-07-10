@@ -4,7 +4,7 @@
 		<div class="main-content">
 			<div class="add-broadcast">
 				<i class="uil uil-plus"></i>
-				<button>add broadcast</button>
+				<router-link to="/account/addBroadcast" class="button">add broadcast</router-link>
 			</div>
 			<div class="content">
 				<h2>broadcasts</h2>
@@ -20,6 +20,16 @@
 		</div>
 	</div>
 </template>
+
+<script>
+	export default {
+		methods: {
+			addBroadcast() {
+				alert('broadcast added')
+			},
+		},
+	}
+</script>
 
 <style scoped>
 	.container {
@@ -72,7 +82,7 @@
 		background-color: blue;
 	}
 
-	.add-broadcast button {
+	.add-broadcast a {
 		letter-spacing: 2px;
 		font-weight: bold;
 		border: none;
@@ -80,6 +90,7 @@
 		cursor: pointer;
 		color: #fff;
 		text-transform: capitalize;
+		text-decoration: none;
 	}
 
 	i {
