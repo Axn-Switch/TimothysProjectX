@@ -19,12 +19,12 @@
 			</div>
 		</div>
 		<popup v-if="popups" class="popup">
-			<button @click="popups = false">close</button>
+			<i class="uil uil-times" @click="popups = false"></i>
 			<form>
 				<input type="text" placeholder="name" />
-				<input type="url" placeholder="link" />
+				<input type="url" placeholder="broadcast link" />
 				<input type="url" placeholder="image link" />
-				<input type="text" placeholder="host" />
+				<input type="text" placeholder="host name" />
 
 				<button type="submit">add broadcast</button>
 			</form>
@@ -48,9 +48,10 @@
 
 <style scoped>
 	.popup {
-		width: 600px;
+		min-width: 600px;
 		height: 500px;
-		border: 1px solid gray;
+		padding: 10px;
+		border: none;
 		position: absolute;
 		left: 30%;
 		margin-top: 40px;
@@ -58,6 +59,53 @@
 		box-shadow: 0px 2px 8px rgba(35, 32, 32, 0.773);
 	}
 
+	.popup i {
+		color: #000;
+		font-size: 25px;
+		font-weight: bold;
+		cursor: pointer;
+		position: absolute;
+		left: 87%;
+		margin-top: 20px;
+	}
+
+	.popup form {
+		display: flex;
+		flex-direction: column;
+		width: 600px;
+		align-items: center;
+		margin-top: 70px;
+	}
+
+	.popup form input {
+		width: 400px;
+		padding: 10px;
+		margin-top: 20px;
+	}
+	.popup form input::placeholder {
+		color: #ccc;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.popup form button {
+		margin-top: 30px;
+		border: none;
+		width: 250px;
+		padding: 10px;
+		cursor: pointer;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: #58b4f8;
+		border-radius: 5px;
+		color: #fff;
+		letter-spacing: 2px;
+	}
+
+	.popup form button:hover {
+		background-color: blue;
+	}
 	.container {
 		display: flex;
 	}
