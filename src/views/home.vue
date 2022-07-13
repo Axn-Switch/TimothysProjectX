@@ -35,7 +35,7 @@
 		font-size: 20px;
 		color: rgba(255, 255, 0, 0.648);
 		font-weight: bold;
-		width: 90%;
+		width: 81%;
 		text-align: center;
 		letter-spacing: 2px;
 		text-transform: uppercase;
