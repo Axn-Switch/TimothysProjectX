@@ -25,7 +25,6 @@
 				<input type="url" placeholder="broadcast link" />
 				<input type="url" placeholder="image link" />
 				<input type="text" placeholder="host name" />
-
 				<button type="submit">add broadcast</button>
 			</form>
 		</popup>
