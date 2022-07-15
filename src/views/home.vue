@@ -16,7 +16,7 @@
 				</div>
 			</div>
 		</div>
-		<img src="../assets/Untitled.png" alt="#background image" />
+		<img src="../assets/Untitled.png" alt="#background image">
 	</div>
 </template>
 
