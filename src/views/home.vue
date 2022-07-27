@@ -1,23 +1,25 @@
-
 <template>
 	<div class="container">
-		<div class="content-box">
-			<div>
-				<p>
-					start streaming the
-					<span class="title">FunLympic</span> <span class="title-2"> Games </span>
-				</p>
-				<div class="links">
-					<router-link to="/login" class="login">Login</router-link>
-					<router-link to="/signup" class="signup">Signup</router-link>
+		<div>
+			<div id="img">
+
+			</div>
+			<div class="content-box">
+				<div>
+					<p>Watch the FunLympic games Online. 
+					</p>
+				<div>
+					<div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus at velit volutpat,
+						 sollicitudin semper tortor finibus. Pellentesque vitae ni
+					</div>
+					<div class="links">
+						<router-link to="/signup" class="signup">Signup</router-link>
+						<router-link to="/login" class="login">Login</router-link>
+					</div>
 				</div>
-				<div class="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus at
-					velit volutpat, sollicitudin semper tortor finibus. Pellentesque vitae ni
 				</div>
 			</div>
 		</div>
-		<img src="../assets/Untitled.png" alt="#background image">
 	</div>
 </template>
 
@@ -25,28 +27,34 @@
 	.title-2 {
 		color: rgba(255, 255, 0, 0.67);
 	}
+	.container>div{
+		display: block;
+	}
+	.content-box>div{
+		display:flex;
+	}
+	.content-box>div>div{
+	margin-left: 150px;
+	}
 	.container {
 		display: flex;
 		height: 100vh;
 		width: 100%;
-		background-color: #3d226dd4;
+		padding: 50px;
 	}
 	.container p {
 		box-sizing: border-box;
-		font-size: 20px;
-		color: rgba(255, 255, 0, 0.648);
+		font-size: 3.5em;
+		color: black;
 		font-weight: bold;
-		width: 81%;
-		text-align: center;
 		letter-spacing: 2px;
-		text-transform: uppercase;
+		font-family: Roboto;
 	}
 	.content-box {
-		padding: 50px 150px 50px 150px;
+		padding: 50px 150px 50px 145px;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-left: 120px;
-		border-left: 3px dashed black;
+		border-left: 2px solid black;
 	}
 	.title {
 		color: #fff;
@@ -55,45 +63,49 @@
 		text-transform: uppercase;
 	}
 	.links {
-		padding: 10px;
 		margin-top: 10px;
-		margin-left: 10%;
 	}
 	.links .login {
-		background: rgba(0, 0, 255, 0.532);
+		background: rgba(187, 10, 159, 0.7);
 		letter-spacing: 2px;
-		padding: 10px 40px;
+		padding: 15px 40px;
 		border-radius: 5px;
 		color: #fff;
 		text-decoration: none;
-		margin-right: 30px;
-		font-size: 20px;
+		font-size: 22px;
 		font-weight: bold;
-		text-transform: uppercase;
+		font-family: Roboto;
 	}
 	.links .signup {
-		background: rgba(255, 0, 0, 0.489);
+		background: rgba(75, 162, 131, 0.7);
 		letter-spacing: 2px;
-		padding: 10px 40px;
+		padding: 15px 40px;
 		border-radius: 5px;
 		color: #fff;
 		text-decoration: none;
-		font-size: 20px;
+		font-size: 22px;
 		font-weight: bold;
-		text-transform: uppercase;
+		margin-right: 30px;
+		font-family: Roboto;
 	}
 	.links .login:hover {
-		background-color: blue;
+		background-color: #BB0A9F;
 	}
 	.links .signup:hover {
-		background-color: red;
+		background-color: #4BA283;
 	}
 	.content {
 		margin-top: 20px;
-		text-align: center;
 		color: #999;
+		margin-bottom: 50px;
 	}
-	img {
+	#img {
 		display: flex;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 35vh;
+		background-image: url(../assets/mae.png);
+		
 	}
 </style>
