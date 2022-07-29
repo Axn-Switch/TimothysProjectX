@@ -9,5 +9,7 @@
 		padding: 0;
 		box-sizing: border-box;
 		font-family: poppins;
+		list-style: none;
+		text-decoration: none;
 	}
 </style>
