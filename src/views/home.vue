@@ -1,10 +1,10 @@
 <template>
 	<div class="container">
 		<div>
-			<img src="../assets/mae.png" class="img" alt="people in stadium" />
+			<img src="../assets/mae.png" class="img" alt="fans in a stadium" />
 			<div class="content-box">
 				<div>
-					<p>Watch the FunLympic games Online.</p>
+					<h1>Watch the FunLympic games Online.</h1>
 					<div>
 						<div class="content">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus
@@ -17,10 +17,13 @@
 					</div>
 				</div>
 				<div class="socials">
-					<i class="uil uil-facebook" />
-					<i class="uil uil-instagram" />
-					<i class="uil uil-twitter" />
-					<i class="uil uil-bell" />
+					<h3>follow the games on</h3>
+					<div class="icons">
+						<i class="uil uil-facebook" />
+						<i class="uil uil-instagram" />
+						<i class="uil uil-twitter" />
+						<i class="uil uil-bell" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -28,17 +31,11 @@
 </template>
 
 <style scoped>
-	.title-2 {
-		color: rgba(255, 255, 0, 0.67);
-	}
-	.container > div {
-		display: block;
-	}
 	.content-box > div {
 		display: flex;
 		align-items: center;
 	}
-	.content-box > div p {
+	.content-box > div h1 {
 		font-size: 43px;
 	}
 	.content-box > div > div {
@@ -46,14 +43,11 @@
 	}
 	.container {
 		display: flex;
-		height: 100vh;
-		width: 100%;
-		padding: 50px;
+		padding: 20px 50px 0 50px;
 	}
 	.container p {
 		box-sizing: border-box;
 		font-size: 3.5em;
-		color: black;
 		font-weight: bold;
 		letter-spacing: 2px;
 	}
@@ -63,40 +57,30 @@
 		margin-bottom: auto;
 		border-left: 2px solid black;
 	}
-	.title {
-		color: #fff;
-		letter-spacing: 2px;
-		font-size: 50px;
-		text-transform: uppercase;
-	}
 	.links {
 		margin-top: 10px;
+		font-size: 22px;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-transform: uppercase;
 	}
-	.links .login {
+	.login {
 		background: rgba(187, 10, 159, 0.7);
-		letter-spacing: 2px;
 		padding: 15px 40px;
 		border-radius: 5px;
 		color: #fff;
-		text-decoration: none;
-		font-size: 22px;
-		font-weight: bold;
 	}
-	.links .signup {
+	.signup {
 		background: rgba(75, 162, 131, 0.7);
-		letter-spacing: 2px;
 		padding: 15px 40px;
 		border-radius: 5px;
 		color: #fff;
-		text-decoration: none;
-		font-size: 22px;
-		font-weight: bold;
 		margin-right: 30px;
 	}
-	.links .login:hover {
+	.login:hover {
 		background-color: #bb0a9f;
 	}
-	.links .signup:hover {
+	.signup:hover {
 		background-color: #4ba283;
 	}
 	.content {
@@ -113,13 +97,26 @@
 	}
 
 	.socials {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
 		margin-top: 30px;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.socials h3 {
+		font-size: 15px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	.icons {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		text-align: center;
+		width: 60%;
+		margin-right: 150px;
 		font-size: 30px;
 		cursor: pointer;
-		margin-right: 35px;
-		gap: 60px;
 	}
 </style>

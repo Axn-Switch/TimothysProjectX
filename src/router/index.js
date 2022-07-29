@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import broadcasts from '@/views/broadcasts'
 import home from '@/views/home'
 import login from '@/views/login'
-import signup from '@/views/signup'
-import notfound from '@/views/notFound'
-import broadcasts from '@/views/broadcasts'
-import users from '@/views/users'
 import metrics from '@/views/metrics'
+import notfound from '@/views/Notfound'
+import signup from '@/views/signup'
+import users from '@/views/users'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
 	{
