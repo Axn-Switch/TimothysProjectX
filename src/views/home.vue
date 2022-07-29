@@ -1,22 +1,20 @@
 <template>
 	<div class="container">
 		<div>
-			<div id="img">
-
-			</div>
+			<div id="img"></div>
 			<div class="content-box">
 				<div>
-					<p>Watch the FunLympic games Online. 
-					</p>
-				<div>
-					<div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus at velit volutpat,
-						 sollicitudin semper tortor finibus. Pellentesque vitae ni
+					<p>Watch the FunLympic games Online.</p>
+					<div>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus
+							at velit volutpat, sollicitudin semper tortor finibus. Pellentesque vitae ni
+						</div>
+						<div class="links">
+							<router-link to="/signup" class="signup">Signup</router-link>
+							<router-link to="/login" class="login">Login</router-link>
+						</div>
 					</div>
-					<div class="links">
-						<router-link to="/signup" class="signup">Signup</router-link>
-						<router-link to="/login" class="login">Login</router-link>
-					</div>
-				</div>
 				</div>
 			</div>
 		</div>
@@ -27,14 +25,14 @@
 	.title-2 {
 		color: rgba(255, 255, 0, 0.67);
 	}
-	.container>div{
+	.container > div {
 		display: block;
 	}
-	.content-box>div{
-		display:flex;
+	.content-box > div {
+		display: flex;
 	}
-	.content-box>div>div{
-	margin-left: 150px;
+	.content-box > div > div {
+		margin-left: 150px;
 	}
 	.container {
 		display: flex;
@@ -89,10 +87,10 @@
 		font-family: Roboto;
 	}
 	.links .login:hover {
-		background-color: #BB0A9F;
+		background-color: #bb0a9f;
 	}
 	.links .signup:hover {
-		background-color: #4BA283;
+		background-color: #4ba283;
 	}
 	.content {
 		margin-top: 20px;
@@ -106,6 +104,5 @@
 		width: 100%;
 		height: 35vh;
 		background-image: url(../assets/mae.png);
-		
 	}
 </style>
