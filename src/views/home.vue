@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div>
-			<div id="img"></div>
+			<div class="img"></div>
 			<div class="content-box">
 				<div>
 					<p>Watch the FunLympic games Online.</p>
@@ -46,7 +46,6 @@
 		color: black;
 		font-weight: bold;
 		letter-spacing: 2px;
-		font-family: Roboto;
 	}
 	.content-box {
 		padding: 50px 150px 50px 145px;
@@ -72,7 +71,6 @@
 		text-decoration: none;
 		font-size: 22px;
 		font-weight: bold;
-		font-family: Roboto;
 	}
 	.links .signup {
 		background: rgba(75, 162, 131, 0.7);
@@ -84,7 +82,6 @@
 		font-size: 22px;
 		font-weight: bold;
 		margin-right: 30px;
-		font-family: Roboto;
 	}
 	.links .login:hover {
 		background-color: #bb0a9f;
@@ -97,7 +94,7 @@
 		color: #999;
 		margin-bottom: 50px;
 	}
-	#img {
+	.img {
 		display: flex;
 		background-size: cover;
 		background-position: center;
