@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div>
-			<div class="img"></div>
+			<img src="../assets/mae.png" class="img" alt="people in stadium" />
 			<div class="content-box">
 				<div>
 					<p>Watch the FunLympic games Online.</p>
@@ -15,6 +15,12 @@
 							<router-link to="/login" class="login">Login</router-link>
 						</div>
 					</div>
+				</div>
+				<div class="socials">
+					<i class="uil uil-facebook" />
+					<i class="uil uil-instagram" />
+					<i class="uil uil-twitter" />
+					<i class="uil uil-bell" />
 				</div>
 			</div>
 		</div>
@@ -30,6 +36,10 @@
 	}
 	.content-box > div {
 		display: flex;
+		align-items: center;
+	}
+	.content-box > div p {
+		font-size: 43px;
 	}
 	.content-box > div > div {
 		margin-left: 150px;
@@ -100,6 +110,16 @@
 		background-position: center;
 		width: 100%;
 		height: 35vh;
-		background-image: url(../assets/mae.png);
+	}
+
+	.socials {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 30px;
+		font-size: 30px;
+		cursor: pointer;
+		margin-right: 35px;
+		gap: 60px;
 	}
 </style>
