@@ -1,22 +1,26 @@
 <template>
 	<div class="container">
 		<div>
-			<div id="img">
-
-			</div>
+			<img src="../assets/mae.png" class="img" alt="people in stadium" />
 			<div class="content-box">
 				<div>
-					<p>Watch the FunLympic games Online. 
-					</p>
-				<div>
-					<div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus at velit volutpat,
-						 sollicitudin semper tortor finibus. Pellentesque vitae ni
-					</div>
-					<div class="links">
-						<router-link to="/signup" class="signup">Signup</router-link>
-						<router-link to="/login" class="login">Login</router-link>
+					<p>Watch the FunLympic games Online.</p>
+					<div>
+						<div class="content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur tellus
+							at velit volutpat, sollicitudin semper tortor finibus. Pellentesque vitae ni
+						</div>
+						<div class="links">
+							<router-link to="/signup" class="signup">Signup</router-link>
+							<router-link to="/login" class="login">Login</router-link>
+						</div>
 					</div>
 				</div>
+				<div class="socials">
+					<i class="uil uil-facebook" />
+					<i class="uil uil-instagram" />
+					<i class="uil uil-twitter" />
+					<i class="uil uil-bell" />
 				</div>
 			</div>
 		</div>
@@ -27,14 +31,18 @@
 	.title-2 {
 		color: rgba(255, 255, 0, 0.67);
 	}
-	.container>div{
+	.container > div {
 		display: block;
 	}
-	.content-box>div{
-		display:flex;
+	.content-box > div {
+		display: flex;
+		align-items: center;
 	}
-	.content-box>div>div{
-	margin-left: 150px;
+	.content-box > div p {
+		font-size: 43px;
+	}
+	.content-box > div > div {
+		margin-left: 150px;
 	}
 	.container {
 		display: flex;
@@ -48,7 +56,6 @@
 		color: black;
 		font-weight: bold;
 		letter-spacing: 2px;
-		font-family: Roboto;
 	}
 	.content-box {
 		padding: 50px 150px 50px 145px;
@@ -74,7 +81,6 @@
 		text-decoration: none;
 		font-size: 22px;
 		font-weight: bold;
-		font-family: Roboto;
 	}
 	.links .signup {
 		background: rgba(75, 162, 131, 0.7);
@@ -86,26 +92,34 @@
 		font-size: 22px;
 		font-weight: bold;
 		margin-right: 30px;
-		font-family: Roboto;
 	}
 	.links .login:hover {
-		background-color: #BB0A9F;
+		background-color: #bb0a9f;
 	}
 	.links .signup:hover {
-		background-color: #4BA283;
+		background-color: #4ba283;
 	}
 	.content {
 		margin-top: 20px;
 		color: #999;
 		margin-bottom: 50px;
 	}
-	#img {
+	.img {
 		display: flex;
 		background-size: cover;
 		background-position: center;
 		width: 100%;
 		height: 35vh;
-		background-image: url(../assets/mae.png);
-		
+	}
+
+	.socials {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 30px;
+		font-size: 30px;
+		cursor: pointer;
+		margin-right: 35px;
+		gap: 60px;
 	}
 </style>
