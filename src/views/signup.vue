@@ -54,7 +54,6 @@
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 .container {
 	display: flex;
 	flex-direction: column;
@@ -110,7 +109,6 @@
 .button button:hover {
 	background-color: blue;
 }
-=======
 	.container {
 		display: flex;
 		justify-content: center;
@@ -161,5 +159,4 @@
 	button:hover {
 		background-color: blue;
 	}
->>>>>>> 7a0cffb176ca5198b7d064eb4834f93fcb021bc8
 </style>
