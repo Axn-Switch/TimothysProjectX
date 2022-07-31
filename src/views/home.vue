@@ -32,6 +32,11 @@
 		display: flex;
 		align-items: center;
 	}
+
+	.content-box > div h1 {
+		font-size: 43px;
+	}
+
 	.content-box > div > div {
 		margin-left: 100px;
 	}
@@ -99,6 +104,24 @@
 		font-size: 30px;
 		margin-right: 35px;
 		gap: 60px;
+		padding: 10px;
+	}
+
+	.socials h3 {
+		font-size: 15px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	.icons {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		text-align: center;
+		width: 60%;
+		margin-right: 150px;
+		font-size: 30px;
+		cursor: pointer;
 	}
 	.socials > i {
 		cursor: pointer;
