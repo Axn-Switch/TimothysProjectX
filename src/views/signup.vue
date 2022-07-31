@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="wrapper">
-			<span class="logo">LOGO</span>
+			<span class="logo">Funlympics2023</span>
 			<form @submit.prevent.trim="signup">
 				<div class="input-field">
 					<input type="text" placeholder="username" v-model="username" required />
@@ -47,7 +47,8 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 90vh;
+	height: 100vh;
+	background-image: url('../assets/cool-background.png');
 }
 
 .wrapper {
@@ -55,6 +56,7 @@ export default {
 	padding: 20px 40px;
 	transform: translate(0%, 50%);
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.194);
+	background-color: white;
 }
 
 .wrapper .logo {
@@ -62,7 +64,7 @@ export default {
 	letter-spacing: 2px;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin-left: 120px;
+	margin: auto;
 }
 
 .input-field input {

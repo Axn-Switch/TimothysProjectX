@@ -17,10 +17,10 @@
 					</div>
 				</div>
 				<div class="socials">
-					<i class="uil uil-facebook" />
-					<i class="uil uil-instagram" />
-					<i class="uil uil-twitter" />
-					<i class="uil uil-bell" />
+					<i style="color:#1E4BBF" class="uil uil-facebook" />
+					<i style="color:#B116B5" class="uil uil-instagram" />
+					<i style="color:#0F7DE2" class="uil uil-twitter" />
+					<i style="color:#E3BF00" class="uil uil-bell" />
 				</div>
 			</div>
 		</div>
@@ -38,11 +38,8 @@
 		display: flex;
 		align-items: center;
 	}
-	.content-box > div p {
-		font-size: 43px;
-	}
 	.content-box > div > div {
-		margin-left: 150px;
+		margin-left: 100px;
 	}
 	.container {
 		display: flex;
@@ -52,7 +49,7 @@
 	}
 	.container p {
 		box-sizing: border-box;
-		font-size: 3.5em;
+		font-size: 3.5rem;
 		color: black;
 		font-weight: bold;
 		letter-spacing: 2px;
@@ -116,10 +113,12 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		margin-top: 30px;
+		margin-top: 70px;
 		font-size: 30px;
-		cursor: pointer;
 		margin-right: 35px;
 		gap: 60px;
+	}
+	.socials>i{
+		cursor: pointer;
 	}
 </style>
