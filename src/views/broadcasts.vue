@@ -32,15 +32,15 @@
 </template>
 
 <script>
+	import { ref } from 'vue'
 	import popup from '../components/popup.vue'
 	export default {
 		components: {
 			popup,
 		},
-		data() {
-			return {
-				popups: false,
-			}
+		setup() {
+			const popups = ref(false)
+			return { popups }
 		},
 	}
 </script>

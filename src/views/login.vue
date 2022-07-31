@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="wrapper">
-			<span class="logo">logo</span>
+			<span class="logo">Funlympics2023</span>
 			<form @submit.prevent.trim="login">
 				<div class="input-field">
 					<input type="text" placeholder=" username" v-model="username" required />
@@ -56,7 +56,7 @@
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		font-weight: bold;
-		font-size: 25px;
+		font-size: 16px;
 	}
 	.input-field {
 		padding: 10px;
