@@ -17,11 +17,10 @@
 					</div>
 				</div>
 				<div class="socials">
-					<h3>follow the games on</h3>
-					<i style="color:#1E4BBF" class="uil uil-facebook" />
-					<i style="color:#B116B5" class="uil uil-instagram" />
-					<i style="color:#0F7DE2" class="uil uil-twitter" />
-					<i style="color:#E3BF00" class="uil uil-bell" />
+					<i style="color: #1e4bbf" class="uil uil-facebook" />
+					<i style="color: #b116b5" class="uil uil-instagram" />
+					<i style="color: #0f7de2" class="uil uil-twitter" />
+					<i style="color: #e3bf00" class="uil uil-bell" />
 				</div>
 			</div>
 		</div>
@@ -41,6 +40,11 @@
 		display: flex;
 		align-items: center;
 	}
+
+	.content-box > div h1 {
+		font-size: 43px;
+	}
+
 	.content-box > div > div {
 		margin-left: 100px;
 	}
@@ -108,7 +112,7 @@
 		margin-right: 35px;
 		gap: 60px;
 	}
-	.socials>i{
+	.socials > i {
 		cursor: pointer;
 	}
 </style>
