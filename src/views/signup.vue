@@ -71,7 +71,7 @@
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		font-weight: bold;
-		font-size: 25px;
+		font-size: 16px;
 	}
 	.input-field {
 		padding: 10px;
