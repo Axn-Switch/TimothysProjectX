@@ -17,6 +17,12 @@
 					</div>
 				</div>
 				<div class="socials">
+<<<<<<< HEAD
+					<i style="color:#1E4BBF" class="uil uil-facebook" />
+					<i style="color:#B116B5" class="uil uil-instagram" />
+					<i style="color:#0F7DE2" class="uil uil-twitter" />
+					<i style="color:#E3BF00" class="uil uil-bell" />
+=======
 					<h3>follow the games on</h3>
 					<div class="icons">
 						<i class="uil uil-facebook" />
@@ -24,6 +30,7 @@
 						<i class="uil uil-twitter" />
 						<i class="uil uil-bell" />
 					</div>
+>>>>>>> 7a0cffb176ca5198b7d064eb4834f93fcb021bc8
 				</div>
 			</div>
 		</div>
@@ -35,11 +42,14 @@
 		display: flex;
 		align-items: center;
 	}
+<<<<<<< HEAD
+=======
 	.content-box > div h1 {
 		font-size: 43px;
 	}
+>>>>>>> 7a0cffb176ca5198b7d064eb4834f93fcb021bc8
 	.content-box > div > div {
-		margin-left: 150px;
+		margin-left: 100px;
 	}
 	.container {
 		display: flex;
@@ -47,7 +57,12 @@
 	}
 	.container p {
 		box-sizing: border-box;
+<<<<<<< HEAD
+		font-size: 3.5rem;
+		color: black;
+=======
 		font-size: 3.5em;
+>>>>>>> 7a0cffb176ca5198b7d064eb4834f93fcb021bc8
 		font-weight: bold;
 		letter-spacing: 2px;
 	}
@@ -97,6 +112,15 @@
 	}
 
 	.socials {
+<<<<<<< HEAD
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 70px;
+		font-size: 30px;
+		margin-right: 35px;
+		gap: 60px;
+=======
 		margin-top: 30px;
 		padding: 10px;
 		display: flex;
@@ -117,6 +141,10 @@
 		width: 60%;
 		margin-right: 150px;
 		font-size: 30px;
+		cursor: pointer;
+>>>>>>> 7a0cffb176ca5198b7d064eb4834f93fcb021bc8
+	}
+	.socials>i{
 		cursor: pointer;
 	}
 </style>
