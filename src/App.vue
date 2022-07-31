@@ -9,6 +9,11 @@
 		padding: 0;
 		box-sizing: border-box;
 		font-family: poppins;
+<<<<<<< HEAD
 		font-family: Roboto;
+=======
+		list-style: none;
+		text-decoration: none;
+>>>>>>> 7a0cffb176ca5198b7d064eb4834f93fcb021bc8
 	}
 </style>
