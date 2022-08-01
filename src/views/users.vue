@@ -3,15 +3,30 @@
 		<side-bar />
 		<div class="form">
 			<div class="heading">
-				<p>registered users</p>
-				<i class="uil uil-user"> 200</i>
+				<h1>registered users</h1>
 			</div>
 			<div class="box">
-				<div></div>
+				<div v-for="user in test_user" :key="user.id">{{ user.name }}</div>
 			</div>
 		</div>
 	</div>
 </template>
+
+<script setup>
+	// imports
+	import { ref, onMounted } from 'vue'
+	import axios from 'axios'
+
+	// variables
+	const test_user = ref([])
+
+	// lifecycle and api
+	onMounted(async () => {
+		await axios
+			.get('http://localhost:5000/users')
+			.then((response) => (test_user.value = response.data))
+	})
+</script>
 
 <style scoped>
 	.container {
@@ -24,7 +39,7 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.heading p {
+	.heading h1 {
 		margin-left: -17rem;
 		position: inherit;
 		font-size: 18px;
@@ -38,17 +53,31 @@
 		align-items: center;
 		justify-content: space-around;
 	}
-	.heading i {
-		font-style: normal;
-		font-weight: bold;
-		font-size: 18px;
+
+	.box {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 10px;
+		grid-auto-rows: minmax(100px, auto);
 	}
 
 	.box div {
-		background-color: rgba(128, 128, 128, 0.149);
-		width: 1100px;
-		height: 550px;
-		margin: 20px;
-		border-radius: 3px;
+		border: 1px solid;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		cursor: pointer;
+		font-size: 20px;
+	}
+
+	.box div:hover {
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.334);
+		background-color: #000000;
+		color: #ffffff;
+		border: none;
 	}
 </style>
