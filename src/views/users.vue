@@ -6,7 +6,7 @@
 				<h1>registered users</h1>
 			</div>
 			<div class="box">
-				<div v-for="user in test_user" :key="user.id">{{ user.name }}</div>
+				<div v-for="user in test_user" :key="user.name">{{ user.name }}</div>
 			</div>
 		</div>
 	</div>
@@ -40,11 +40,15 @@
 		flex-direction: column;
 	}
 	.heading h1 {
-		margin-left: -17rem;
-		position: inherit;
-		font-size: 18px;
 		text-transform: uppercase;
-		font-weight: 400;
+		font-size: 25px;
+		text-align: center;
+		border: 1px solid;
+		padding: 10px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		color: #ffffff;
+		background-color: #000000;
 		letter-spacing: 2px;
 	}
 
