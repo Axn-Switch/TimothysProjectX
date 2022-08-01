@@ -8,14 +8,9 @@
 			</div>
 			<div class="content">
 				<h2>broadcasts</h2>
-				<div class="info-box">
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
+				<div :key="tile.id" v-for="tile in tiles">
+        			<Tile />
+    			</div>
 			</div>
 		</div>
 		<popup v-if="popups" class="popup">
@@ -34,6 +29,7 @@
 <script>
 	import { ref } from 'vue'
 	import popup from '../components/popup.vue'
+	import Tile from '../components/tile.vue'
 	export default {
 		components: {
 			popup,
