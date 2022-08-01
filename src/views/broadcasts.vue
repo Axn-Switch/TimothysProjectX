@@ -8,8 +8,8 @@
 			</div>
 			<div class="content">
 				<h2>broadcasts</h2>
-				<div :key="tile.id" v-for="tile in tiles">
-        			<Tile />
+				<div :key="tile.Channel_Name" v-for="tile in tiles">
+        			<Tile :tiles="tiles"/>
     			</div>
 			</div>
 		</div>
@@ -30,14 +30,31 @@
 	import { ref } from 'vue'
 	import popup from '../components/popup.vue'
 	import Tile from '../components/tile.vue'
+
 	export default {
 		components: {
 			popup,
+			Tile,
 		},
 		setup() {
 			const popups = ref(false)
 			return { popups }
 		},
+		data(){
+			return{
+				tiles: [],
+			}
+		},
+		methods:{
+			async fetchBroadcasts(){
+				const res = await fetch('api/broadcasts')
+				const data = await res.json()
+				return data
+    	},
+		},	
+		async created(){
+			this.tiles = await this.fetchBroadcasts()
+  }
 	}
 </script>
 
