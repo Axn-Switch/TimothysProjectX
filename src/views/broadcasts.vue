@@ -6,11 +6,35 @@
 				<i class="uil uil-plus"></i>
 				<button :disabled="popups" @click="popups = true">add broadcast</button>
 			</div>
+
 			<div class="content">
 				<h2>broadcasts</h2>
-				<div :key="tile.Channel_Name" v-for="tile in tiles">
-        			<Tile :tiles="tiles"/>
-    			</div>
+				<table>
+					<thead>
+						<tr>
+							<th>Image</th>
+							<th>channel name</th>
+							<th>description</th>
+							<th>link</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="broadcast in broadcasts" :key="broadcast.id">
+							<td>
+								<img
+									:src="broadcast.Image"
+									alt="server images wey no wan load."
+									style="width: 100px"
+								/>
+							</td>
+							<td v-text="broadcast.Channel_Name"></td>
+							<td v-text="broadcast.description"></td>
+							<td>
+								<a :href="broadcast.link"> {{ broadcast.link }} </a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<popup v-if="popups" class="popup">
@@ -26,36 +50,18 @@
 	</div>
 </template>
 
-<script>
-	import { ref } from 'vue'
+<script setup>
+	import { ref, onMounted } from 'vue'
+	import axios from 'axios'
 	import popup from '../components/popup.vue'
-	import Tile from '../components/tile.vue'
 
-	export default {
-		components: {
-			popup,
-			Tile,
-		},
-		setup() {
-			const popups = ref(false)
-			return { popups }
-		},
-		data(){
-			return{
-				tiles: [],
-			}
-		},
-		methods:{
-			async fetchBroadcasts(){
-				const res = await fetch('api/broadcasts')
-				const data = await res.json()
-				return data
-    	},
-		},	
-		async created(){
-			this.tiles = await this.fetchBroadcasts()
-  }
-	}
+	const popups = ref(false)
+	const broadcasts = ref([])
+	const BaseUrl = ref('http://localhost:5000/broadcasts')
+
+	onMounted(async () => {
+		await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
+	})
 </script>
 
 <style scoped>
@@ -129,6 +135,17 @@
 	.content {
 		margin-left: 20px;
 		margin-top: 100px;
+	}
+	.content table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th,
+	td {
+		border: 1px solid;
+		padding: 10px;
+		text-align: center;
 	}
 
 	h2 {

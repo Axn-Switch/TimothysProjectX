@@ -1,75 +1,87 @@
 {
-    "broadcasts":[
-        {
-        "_id": {
-          "$oid": "627442282e663751589bc5cb"
-        },
-        "Channel_Name": "Hockey",
-        "Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
-        "description": "Hockey LIvestream running now",
-        "link": "https://www.youtube.com/embed/6if8JqZYGjw"
-      },{
-        "_id": {
-          "$oid": "6274eb0eef827f80b2e340a7"
-        },
-        "Channel_Name": "Soccer",
-        "Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
-        "description": "Football LIvestream running now",
-        "link": "https://www.youtube.com/embed/bhZpyfXs6WA"
-      },{
-        "_id": {
-          "$oid": "6274eb28ef827f80b2e340a8"
-        },
-        "Channel_Name": "Pool",
-        "Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
-        "description": "Pool LIvestream running now",
-        "link": "https://www.youtube.com/embed/watch?v=ZvbkycbtrW0"
-      },{
-        "_id": {
-          "$oid": "6274eb37ef827f80b2e340a9"
-        },
-        "Channel_Name": "Swimming",
-        "Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
-        "description": "Swimming LIvestream running now",
-        "link": "https://www.youtube.com/"
-      },{
-        "_id": {
-          "$oid": "6274eb4def827f80b2e340aa"
-        },
-        "Channel_Name": "Javelin",
-        "Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
-        "description": "Javelin LIvestream running now",
-        "link": "https://www.youtube.com/"
-      },{
-        "_id": {
-          "$oid": "6274eb6aef827f80b2e340ab"
-        },
-        "Channel_Name": "track events",
-        "Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
-        "description": "Track Events LIvestream running now",
-        "link": "https://www.youtube.com/"
-      },{
-        "_id": {
-          "$oid": "6274eb98ef827f80b2e340ac"
-        },
-        "Channel_Name": "DeadLifting",
-        "Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
-        "description": "DeadLifting LIvestream running now",
-        "link": "https://www.youtube.com/"
-      },{
-        "_id": {
-          "$oid": "6274ebd0ef827f80b2e340ae"
-        },
-        "Channel_Name": "Marathon cycling",
-        "Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
-        "description": "Marathon Clycling LIvestream running now",
-        "link": "https://www.youtube.com/"
-      }
-    ],
-
-    "users":[
-        {
-            "name" : "Timothy"
-        }
-    ]
+	"broadcasts": [
+		{
+			"_id": {
+				"$oid": "627442282e663751589bc5cb"
+			},
+			"Channel_Name": "Hockey",
+			"Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
+			"description": "Hockey LIvestream running now",
+			"link": "https://www.youtube.com/embed/6if8JqZYGjw"
+		},
+		{
+			"_id": {
+				"$oid": "6274eb0eef827f80b2e340a7"
+			},
+			"Channel_Name": "Soccer",
+			"Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
+			"description": "Football LIvestream running now",
+			"link": "https://www.youtube.com/embed/bhZpyfXs6WA"
+		},
+		{
+			"_id": {
+				"$oid": "6274eb28ef827f80b2e340a8"
+			},
+			"Channel_Name": "Pool",
+			"Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
+			"description": "Pool LIvestream running now",
+			"link": "https://www.youtube.com/embed/watch?v=ZvbkycbtrW0"
+		},
+		{
+			"_id": {
+				"$oid": "6274eb37ef827f80b2e340a9"
+			},
+			"Channel_Name": "Swimming",
+			"Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
+			"description": "Swimming LIvestream running now",
+			"link": "https://www.youtube.com/"
+		},
+		{
+			"_id": {
+				"$oid": "6274eb4def827f80b2e340aa"
+			},
+			"Channel_Name": "Javelin",
+			"Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
+			"description": "Javelin LIvestream running now",
+			"link": "https://www.youtube.com/"
+		},
+		{
+			"_id": {
+				"$oid": "6274eb6aef827f80b2e340ab"
+			},
+			"Channel_Name": "track events",
+			"Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
+			"description": "Track Events LIvestream running now",
+			"link": "https://www.youtube.com/"
+		},
+		{
+			"_id": {
+				"$oid": "6274eb98ef827f80b2e340ac"
+			},
+			"Channel_Name": "DeadLifting",
+			"Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
+			"description": "DeadLifting LIvestream running now",
+			"link": "https://www.youtube.com/"
+		},
+		{
+			"_id": {
+				"$oid": "6274ebd0ef827f80b2e340ae"
+			},
+			"Channel_Name": "Marathon cycling",
+			"Image": "https://thehockeywriters.com/ezoimgfmt/s3951.pcdn.co/wp-content/uploads/2015/09/Brendan-Gallagher-Canadiens-Feb-2018.jpg?ezimgfmt=ng%3Awebp%2Fngcb57",
+			"description": "Marathon Clycling LIvestream running now",
+			"link": "https://www.youtube.com/"
+		}
+	],
+	"users": [
+		{
+			"name": "Timothy"
+		},
+		{
+			"name": "brillz"
+		},
+		{
+			"name": "architect"
+		}
+	]
 }
