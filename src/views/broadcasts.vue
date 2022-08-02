@@ -54,32 +54,17 @@
 	import { ref, onMounted } from 'vue'
 	import axios from 'axios'
 	import popup from '../components/popup.vue'
-	import Tile from '../components/tile.vue'
 
 	const popups = ref(false)
 	const broadcasts = ref([])
+	const BaseUrl = ref('http://localhost:5000/broadcasts')
 
 	onMounted(async () => {
-		await axios.get('http://localhost:5000/broadcasts').then((response) => {
-			console.log(response.data)
-			broadcasts.value = response.data
-		})
+		await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
 	})
 </script>
 
 <style scoped>
-	.content table {
-		border-collapse: collapse;
-		width: 100%;
-	}
-
-	th,
-	td {
-		border: 1px solid;
-		padding: 10px;
-		text-align: center;
-	}
-
 	.popup {
 		min-width: 600px;
 		height: 500px;
@@ -150,6 +135,17 @@
 	.content {
 		margin-left: 20px;
 		margin-top: 100px;
+	}
+	.content table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th,
+	td {
+		border: 1px solid;
+		padding: 10px;
+		text-align: center;
 	}
 
 	h2 {
