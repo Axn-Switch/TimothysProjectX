@@ -5,6 +5,8 @@ import metrics from '@/views/metrics'
 import notfound from '@/views/Notfound'
 import signup from '@/views/signup'
 import users from '@/views/users'
+import userhome from '@/views/userhome'
+import watch from '@/views/watch'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -38,6 +40,16 @@ const routes = [
 		path: '/account/metrics',
 		name: 'metrics',
 		component: metrics,
+	},
+	{
+		path: '/account/userhome',
+		name: 'userhome',
+		component: userhome,
+	},
+	{
+		path: '/account/watch',
+		name: 'watch',
+		component: watch,
 	},
 
 	// catch all unregistered routes
