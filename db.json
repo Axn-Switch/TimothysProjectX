@@ -75,13 +75,20 @@
 	],
 	"users": [
 		{
-			"name": "Timothy"
+			"username": "Timothy",
+			"password": "TikaTika"
 		},
 		{
-			"name": "brillz"
+			"username": "brillz",
+			"password": "brillzsama"
 		},
 		{
-			"name": "architect"
+			"username": "architect",
+			"password": "archibot"
+		},
+		{
+			"username": "architect",
+			"password": "archibot"
 		}
 	]
 }
