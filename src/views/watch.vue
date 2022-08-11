@@ -31,7 +31,7 @@
 	const popups = ref(false)
 	const broadcasts = ref([])
 	const BaseUrl = ref('http://localhost:5000/broadcasts')
-
+    
 	onMounted(async () => {
 		await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
 	})

@@ -7,19 +7,20 @@
 					<input type="text" placeholder=" username" v-model="username" required />
 				</div>
 				<div class="input-field">
-					<input type="password" placeholder=" password" v-model="password" required />
+					<input typ="password" placeholder=" password" v-model="password" required />
 				</div>
 				<div class="button">
 					<button type="submit">login</button>
 				</div>
 			</form>
 		</div>
-		/*api call to filter requests http://localhost:5000/users?username=Timothy */
 	</div>
 </template>
 
 <script>
-	import { ref } from 'vue'
+	import { ref, onMounted } from 'vue'
+	import axios from 'axios'
+
 	export default {
 		name: 'login',
 		setup() {
@@ -28,7 +29,10 @@
 
 			// methods
 			const login = () => {
-				alert('welcome user')
+				getUser(username.value)
+				/*api call to filter requests http://localhost:5000/users?username=Timothy */
+				//make an api call to get the username and password from the backend
+
 			}
 			return {
 				username,
@@ -36,6 +40,14 @@
 				login,
 			}
 		},
+		methods:{
+			async getUser(username){
+				const broadcasts = ref([])
+				const BaseUrl = ref('http://localhost:5000/users?username=' + username)
+				await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
+				console.log(broadcasts)
+			}
+		}
 	}
 </script>
 
