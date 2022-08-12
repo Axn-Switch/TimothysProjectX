@@ -87,8 +87,8 @@
 			"password": "archibot"
 		},
 		{
-			"username": "architect",
-			"password": "archibot"
+			"username": "admin",
+			"password": "12345"
 		}
 	]
 }

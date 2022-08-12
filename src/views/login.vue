@@ -7,7 +7,7 @@
 					<input type="text" placeholder=" username" v-model="username" required />
 				</div>
 				<div class="input-field">
-					<input typ="password" placeholder=" password" v-model="password" required />
+					<input type="password" placeholder=" password" v-model="password" required />
 				</div>
 				<div class="button">
 					<button type="submit">login</button>
@@ -17,37 +17,19 @@
 	</div>
 </template>
 
-<script>
-	import { ref, onMounted } from 'vue'
+<script setup>
 	import axios from 'axios'
+	import { ref } from 'vue'
 
-	export default {
-		name: 'login',
-		setup() {
-			const username = ref('')
-			const password = ref('')
+	const username = ref('')
+	const password = ref('')
+	const BaseUrl = ref(`http://localhost:5000/users`)
 
-			// methods
-			const login = () => {
-				getUser(username.value)
-				/*api call to filter requests http://localhost:5000/users?username=Timothy */
-				//make an api call to get the username and password from the backend
-
-			}
-			return {
-				username,
-				password,
-				login,
-			}
-		},
-		methods:{
-			async getUser(username){
-				const broadcasts = ref([])
-				const BaseUrl = ref('http://localhost:5000/users?username=' + username)
-				await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
-				console.log(broadcasts)
-			}
-		}
+	const login = async () => {
+		await axios
+			.get(`${BaseUrl.value}?username=${username.value}`)
+			.then((response) => console.log(response.data))
+			.catch((e) => console.log('error occured'))
 	}
 </script>
 
