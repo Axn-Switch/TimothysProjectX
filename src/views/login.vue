@@ -23,13 +23,12 @@
 
 	const username = ref('')
 	const password = ref('')
-	const broadcasts = ref([])
 	const BaseUrl = ref(`http://localhost:5000/users`)
 
 	const login = async () => {
 		await axios
 			.get(`${BaseUrl.value}?username=${username.value}`)
-			.then((response) => console.log(response))
+			.then((response) => console.log(response.data))
 			.catch((e) => console.log('error occured'))
 	}
 </script>
