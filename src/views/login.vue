@@ -23,7 +23,15 @@
 
 	export default {
 		name: 'login',
-		setup() {
+		
+		methods:{
+			async getUser(username){
+				const broadcasts = ref([])
+				const BaseUrl = ref('http://localhost:5000/users?username=' + username)
+				await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
+				console.log(broadcasts)
+			}
+		},setup() {
 			const username = ref('')
 			const password = ref('')
 
@@ -40,14 +48,6 @@
 				login,
 			}
 		},
-		methods:{
-			async getUser(username){
-				const broadcasts = ref([])
-				const BaseUrl = ref('http://localhost:5000/users?username=' + username)
-				await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
-				console.log(broadcasts)
-			}
-		}
 	}
 </script>
 
