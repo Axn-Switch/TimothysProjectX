@@ -7,7 +7,7 @@
 					<input type="text" placeholder=" username" v-model="username" required />
 				</div>
 				<div class="input-field">
-					<input typ="password" placeholder=" password" v-model="password" required />
+					<input type="password" placeholder=" password" v-model="password" required />
 				</div>
 				<div class="button">
 					<button type="submit">login</button>
@@ -17,21 +17,13 @@
 	</div>
 </template>
 
-<script>
-	import { ref, onMounted } from 'vue'
+<script setup>
 	import axios from 'axios'
+	import { ref } from 'vue'
 
 	export default {
 		name: 'login',
-		
-		methods:{
-			async getUser(username){
-				const broadcasts = ref([])
-				const BaseUrl = ref('http://localhost:5000/users?username=' + username)
-				await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
-				console.log(broadcasts)
-			}
-		},setup() {
+		setup() {
 			const username = ref('')
 			const password = ref('')
 
@@ -48,6 +40,14 @@
 				login,
 			}
 		},
+		methods:{
+			async getUser(username){
+				const broadcasts = ref([])
+				const BaseUrl = ref('http://localhost:5000/users?username=' + username)
+				await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
+				console.log(broadcasts)
+			}
+		}
 	}
 </script>
 
