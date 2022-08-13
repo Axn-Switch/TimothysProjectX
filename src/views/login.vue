@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="wrapper">
 			<span class="logo">Funlympics2023</span>
-			<form @submit.prevent.trim="login">
+			<form @submit.prevent.trim="login" action="userhome">
 				<div class="input-field">
 					<input type="text" placeholder=" username" v-model="username" required />
 				</div>
@@ -19,36 +19,28 @@
 
 <script setup>
 	import axios from 'axios'
-	import { ref } from 'vue'
+	import { ref, resolveDirective } from 'vue' 	
+	import { useRouter } from 'vue-router'
 
-	export default {
-		name: 'login',
-		setup() {
-			const username = ref('')
-			const password = ref('')
+ 	const username = ref('')
+	const password = ref('')
+	const BaseUrl = ref(`http://localhost:5000/users`)
+	const arr = [];
+	const router = useRouter();
 
-			// methods
-			const login = () => {
-				getUser(username.value)
-				/*api call to filter requests http://localhost:5000/users?username=Timothy */
-				//make an api call to get the username and password from the backend
+	const login = async () => {
+		await axios
+			.get(`${BaseUrl.value}?username=${username.value}&password=${password.value}`)
+			.then((response) => arr.push(response.data))
+			.catch((e) => console.log('error occured'))
 
+		console.log(arr[0]);
+			if(arr[0].length != 0){
+				console.log("yes")
+				router.push({name: 'userhome'})
 			}
-			return {
-				username,
-				password,
-				login,
-			}
-		},
-		methods:{
-			async getUser(username){
-				const broadcasts = ref([])
-				const BaseUrl = ref('http://localhost:5000/users?username=' + username)
-				await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
-				console.log(broadcasts)
-			}
-		}
 	}
+
 </script>
 
 <style scoped>
