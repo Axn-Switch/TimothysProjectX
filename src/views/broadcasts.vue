@@ -21,11 +21,7 @@
 					<tbody>
 						<tr v-for="broadcast in broadcasts" :key="broadcast.id">
 							<td>
-								<img
-									:src="broadcast.Image"
-									alt="server images wey no wan load."
-									style="width: 100px"
-								/>
+								<img :src="broadcast.Image" alt="server images wey no wan load." style="width: 100px" />
 							</td>
 							<td v-text="broadcast.Channel_Name"></td>
 							<td v-text="broadcast.description"></td>
@@ -51,16 +47,19 @@
 </template>
 
 <script setup>
-	import { ref, onMounted } from 'vue'
 	import axios from 'axios'
-	import popup from '../components/popup.vue'
+	import popup from '@/components/popup.vue'
+	import { onMounted, ref } from 'vue'
 
 	const popups = ref(false)
 	const broadcasts = ref([])
 	const BaseUrl = ref('http://localhost:5000/broadcasts')
 
 	onMounted(async () => {
-		await axios.get(BaseUrl.value).then((response) => (broadcasts.value = response.data))
+		await axios
+			.get(BaseUrl.value)
+			.then((response) => (broadcasts.value = response.data))
+			.catch((e) => console.log('There is an issue communicating with the server.'))
 	})
 </script>
 
