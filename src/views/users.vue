@@ -6,7 +6,7 @@
 				<h1>registered users</h1>
 			</div>
 			<div class="box">
-				<div v-for="user in test_user" :key="user.name">{{ user.name }}</div>
+				<div v-for="user in test_user" :key="user.username">{{ user.username }}</div>
 			</div>
 		</div>
 	</div>

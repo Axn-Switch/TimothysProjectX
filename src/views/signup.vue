@@ -49,7 +49,8 @@
 				await axios.post('http://localhost:5000/users', {
 					id: username.value,
 					username: username.value,
-					password: password.value
+					password: password.value,
+					role: "user"
 				})
 				.then(function (response) {
 					prompt("Account Succesfully created") 
