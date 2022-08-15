@@ -19,28 +19,27 @@
 
 <script setup>
 	import axios from 'axios'
-	import { ref, resolveDirective } from 'vue' 	
+	import { ref } from 'vue'
 	import { useRouter } from 'vue-router'
 
- 	const username = ref('')
+	const username = ref('')
 	const password = ref('')
 	const BaseUrl = ref(`http://localhost:5000/users`)
-	const arr = [];
-	const router = useRouter();
+	const router = useRouter()
 
 	const login = async () => {
 		await axios
 			.get(`${BaseUrl.value}?username=${username.value}&password=${password.value}`)
-			.then((response) => arr.push(response.data))
-			.catch((e) => console.log('error occured'))
-
-		console.log(arr[0]);
-			if(arr[0].length != 0){
-				console.log("yes")
-				router.push({name: 'userhome'})
-			}
+			.then((response) => {
+				console.log(response.data[0].role)
+				if (response.data[0].role === 'admin') {
+					router.push('/account/broadcasts')
+				} else {
+					router.push('/account/userhome')
+				}
+			})
+			.catch(() => alert('username or password incorrect'))
 	}
-
 </script>
 
 <style scoped>

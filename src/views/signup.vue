@@ -13,12 +13,7 @@
 					<input type="password" placeholder="password" v-model="password" required />
 				</div>
 				<div class="input-field">
-					<input
-						type="password"
-						placeholder="confirm password"
-						v-model="confirmPassword"
-						required
-					/>
+					<input type="password" placeholder="confirm password" v-model="confirmPassword" required />
 				</div>
 				<div class="button">
 					<button type="submit">create account</button>
@@ -30,37 +25,37 @@
 
 <script setup>
 	import axios from 'axios'
-	import { ref, resolveDirective } from 'vue' 	
+	import { ref } from 'vue'
 	import { useRouter } from 'vue-router'
 
-		const username = ref('')
-		const email = ref('')
-		const password = ref('')
-		const confirmPassword = ref('')
-		const BaseUrl = ref(`http://localhost:5000/users`)
-		const router = useRouter();
+	const username = ref('')
+	const email = ref('')
+	const password = ref('')
+	const confirmPassword = ref('')
+	const BaseUrl = ref(`http://localhost:5000/users`)
+	const router = useRouter()
 
-		function delay(time) {
-			return new Promise(resolve => setTimeout(resolve, time));
-		}
-		// methods
-		const signup = async () => {
-			
-				await axios.post('http://localhost:5000/users', {
-					id: username.value,
-					username: username.value,
-					password: password.value,
-					role: "user"
-				})
-				.then(function (response) {
-					prompt("Account Succesfully created") 
-					delay(3000)
-					router.push({name: 'login'})
-				})
-				.catch(function (error) {
-					console.log(error);
-				});
-		}
+	function delay(time) {
+		return new Promise((resolve) => setTimeout(resolve, time))
+	}
+	// methods
+	const signup = async () => {
+		await axios
+			.post('http://localhost:5000/users', {
+				id: username.value,
+				username: username.value,
+				password: password.value,
+				role: 'user',
+			})
+			.then(function (response) {
+				alert('Account Succesfully created')
+				delay(3000)
+				router.push({ name: 'login' })
+			})
+			.catch(function (error) {
+				console.log(error)
+			})
+	}
 </script>
 
 <style scoped>
