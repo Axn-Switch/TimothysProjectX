@@ -5,7 +5,7 @@
 	</div>
 </template>
 
-<style scope>
+<style scoped>
 	.container {
 		height: 100vh;
 		display: flex;

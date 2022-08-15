@@ -7,6 +7,8 @@ import signup from '@/views/signup'
 import users from '@/views/users'
 import userhome from '@/views/userhome'
 import watch from '@/views/watch'
+import adminsecurelogin from '@/views/adminsecurelogin'
+import passwordreset from '@/views/passwordreset'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -50,6 +52,16 @@ const routes = [
 		path: '/account/watch',
 		name: 'watch',
 		component: watch,
+	},
+	{
+		path: '/account/adminsecurelogin',
+		name: 'adminsecurelogin',
+		component: adminsecurelogin,
+	},
+	{
+		path: '/account/passwordreset',
+		name: 'passwordreset',
+		component: passwordreset,
 	},
 
 	// catch all unregistered routes
