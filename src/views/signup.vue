@@ -28,29 +28,39 @@
 	</div>
 </template>
 
-<script>
-	import { ref } from 'vue'
-	export default {
-		name: 'signup',
-		setup() {
-			const username = ref('')
-			const email = ref('')
-			const password = ref('')
-			const confirmPassword = ref('')
+<script setup>
+	import axios from 'axios'
+	import { ref, resolveDirective } from 'vue' 	
+	import { useRouter } from 'vue-router'
 
-			// methods
-			const signup = () => {
-				alert('welcome user')
-			}
-			return {
-				username,
-				email,
-				password,
-				confirmPassword,
-				signup,
-			}
-		},
-	}
+		const username = ref('')
+		const email = ref('')
+		const password = ref('')
+		const confirmPassword = ref('')
+		const BaseUrl = ref(`http://localhost:5000/users`)
+		const router = useRouter();
+
+		function delay(time) {
+			return new Promise(resolve => setTimeout(resolve, time));
+		}
+		// methods
+		const signup = async () => {
+			
+				await axios.post('http://localhost:5000/users', {
+					id: username.value,
+					username: username.value,
+					password: password.value,
+					role: "user"
+				})
+				.then(function (response) {
+					prompt("Account Succesfully created") 
+					delay(3000)
+					router.push({name: 'login'})
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+		}
 </script>
 
 <style scoped>

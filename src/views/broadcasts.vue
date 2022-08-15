@@ -35,11 +35,11 @@
 		</div>
 		<popup v-if="popups" class="popup">
 			<i class="uil uil-times" @click="popups = false"></i>
-			<form>
-				<input type="text" placeholder="name" />
-				<input type="url" placeholder="broadcast link" />
-				<input type="url" placeholder="image link" />
-				<input type="text" placeholder="host name" />
+			<form @submit.prevent.trim="addBroadcast" action="broadcasts">
+				<input type="text" placeholder="name" v-model="channelName" />
+				<input type="url" placeholder="broadcast link" v-model="broadcastLink"/>
+				<input type="url" placeholder="image link" v-model="imageLink"/>
+				<input type="text" placeholder="description" v-model="description"/>
 				<button type="submit">add broadcast</button>
 			</form>
 		</popup>
@@ -48,12 +48,18 @@
 
 <script setup>
 	import axios from 'axios'
-	import popup from '@/components/popup.vue'
 	import { onMounted, ref } from 'vue'
+	import popup from '../components/popup.vue'
+	import { useRouter } from 'vue-router'
 
 	const popups = ref(false)
 	const broadcasts = ref([])
+	const imageLink = ref('')
+	const broadcastLink = ref('')
+	const description = ref('')
+	const channelName = ref('')
 	const BaseUrl = ref('http://localhost:5000/broadcasts')
+	const router = useRouter()
 
 	onMounted(async () => {
 		await axios
@@ -61,6 +67,24 @@
 			.then((response) => (broadcasts.value = response.data))
 			.catch((e) => console.log('There is an issue communicating with the server.'))
 	})
+
+	const addBroadcast = async () => {
+
+				await axios.post('http://localhost:5000/broadcasts', {
+					id: broadcasts.length + 1,
+					Channel_Name: channelName.value,
+					Image: imageLink.value,
+					description: description.value,
+					link: broadcastLink.value
+				})
+				.then(function (response) {
+					console.log('yes')
+					router.go()
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+		}
 </script>
 
 <style scoped>

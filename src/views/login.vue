@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="wrapper">
 			<span class="logo">Funlympics2023</span>
-			<form @submit.prevent.trim="login">
+			<form @submit.prevent.trim="login" action="userhome">
 				<div class="input-field">
 					<input type="text" placeholder=" username" v-model="username" required />
 				</div>
@@ -19,18 +19,28 @@
 
 <script setup>
 	import axios from 'axios'
-	import { ref } from 'vue'
+	import { ref, resolveDirective } from 'vue' 	
+	import { useRouter } from 'vue-router'
 
-	const username = ref('')
+ 	const username = ref('')
 	const password = ref('')
 	const BaseUrl = ref(`http://localhost:5000/users`)
+	const arr = [];
+	const router = useRouter();
 
 	const login = async () => {
 		await axios
-			.get(`${BaseUrl.value}?username=${username.value}`)
-			.then((response) => console.log(response.data))
+			.get(`${BaseUrl.value}?username=${username.value}&password=${password.value}`)
+			.then((response) => arr.push(response.data))
 			.catch((e) => console.log('error occured'))
+
+		console.log(arr[0]);
+			if(arr[0].length != 0){
+				console.log("yes")
+				router.push({name: 'userhome'})
+			}
 	}
+
 </script>
 
 <style scoped>
