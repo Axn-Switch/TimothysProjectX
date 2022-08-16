@@ -9,6 +9,9 @@
 				<div class="input-field">
 					<input type="password" placeholder=" password" v-model="password" required />
 				</div>
+				<div class="forgot-password">
+					<router-link to="/account/passwordreset">forgot password</router-link>
+				</div>
 				<div class="button">
 					<button type="submit">login</button>
 				</div>
@@ -43,6 +46,14 @@
 </script>
 
 <style scoped>
+	.forgot-password {
+		text-transform: capitalize;
+		margin-left: 50%;
+		letter-spacing: 1px;
+	}
+	.forgot-password:hover {
+		text-decoration: underline;
+	}
 	.container {
 		display: flex;
 		justify-content: center;
@@ -51,7 +62,7 @@
 		min-width: fit-content;
 		border: 1px solid #ccc;
 		text-align: center;
-		border-radius: 5px;
+		border-radius: 3px;
 		margin-top: 100px;
 		padding: 15px;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.194);
@@ -79,14 +90,14 @@
 	}
 	button {
 		margin-top: 10px;
-		padding: 5px 50px;
+		padding: 5px 100px;
 		cursor: pointer;
 		font-size: 15px;
 		font-weight: bold;
 		text-transform: uppercase;
 		background: rgba(79, 166, 253, 0.767);
 		border: none;
-		border-radius: 5px;
+		border-radius: 3px;
 		color: #fff;
 	}
 
