@@ -48,8 +48,8 @@
 <style scoped>
 	.forgot-password {
 		text-transform: capitalize;
-		margin-left: 50%;
-		letter-spacing: 1px;
+		margin-left: 46%;
+		font-size: 15px;
 	}
 	.forgot-password:hover {
 		text-decoration: underline;
