@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="wrapper">
 			<span class="logo">Funlympics2023</span>
-			<form @submit.prevent.trim="login" action="userhome">
+			<form @submit.prevent.trim="login">
 				<div class="input-field">
 					<input type="text" placeholder=" username" v-model="username" required />
 				</div>
