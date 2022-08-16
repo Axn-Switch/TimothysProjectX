@@ -9,10 +9,20 @@
 			<li><router-link to="/account/metrics">metrics</router-link></li>
 		</ul>
 		<div class="logout">
-			<button>Logout</button>
+			<button @click="logout">Logout</button>
 		</div>
 	</div>
 </template>
+
+<script setup>
+	import { useRouter } from 'vue-router'
+	const router = useRouter()
+
+	const logout = () => {
+		alert('You are about to be logged out.')
+		router.push('/login')
+	}
+</script>
 
 <style scoped>
 	.sidebar {
