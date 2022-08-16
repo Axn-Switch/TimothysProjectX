@@ -40,7 +40,7 @@
 			axios.get(`${`http://localhost:5000/users`}?username=${username.value}`).then((response) => {
 				id = response.data[0].id
 				passReset.password = password.value
-				axios.patch(`${`http://localhost:5000/users`}/${id}`, passReset)
+				axios.patch(`${`http://localhost:5000/users`}/${id}`, passReset).then(router.push('/login'))
 			})
 		}
 	}
