@@ -92,6 +92,12 @@
       "username": "testuser",
       "password": "0000",
       "role": "user"
+    },
+    {
+      "id": "tika",
+      "username": "tika",
+      "password": "tika123",
+      "role": "user"
     }
   ]
 }
