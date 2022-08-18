@@ -1,8 +1,11 @@
 {
+  "homepage": "https://github.com/Axn-Switch/TimothysProjectX.git",
   "name": "funlympics2023",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "backend": "json-server --watch db.json --port 5000"
@@ -17,6 +20,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "gh-pages": "^4.0.0",
     "nodemon": "^2.0.19"
   },
   "browserslist": [
