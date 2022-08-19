@@ -4,7 +4,7 @@
 		<section id="content-area">
 			<header>
 				<h1>Headlines</h1>
-				<p>Loren Ipsum Dolor blah</p>
+				<p>Donald duke makes history at the games for the 2nd year in a row</p>
 			</header>
 			<div>
 				<h1>Welcome User</h1>
@@ -12,14 +12,15 @@
 			</div>
 
 			<div>
-				<div
+				<router-link :to="`/watch/${broadcast.Channel_Name}`" class="signup"
 					v-for="broadcast in broadcasts"
 					:key="broadcast.id"
 					:style="{ 'background-image': `linear-gradient(to right,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) ,url(${broadcast.Image})` }"
+
 				>
 					<h3>{{ broadcast.Channel_Name }}</h3>
 					<p>{{ broadcast.description }}</p>
-				</div>
+				</router-link>
 			</div>
 		</section>
 	</div>
@@ -77,8 +78,9 @@
 		overflow: scroll;
 		justify-content: space-around;
 		padding: 5px 2px 0px 2px;
+	 	justify-content: flex-start;
 	}
-	header + div + div > div {
+	header + div + div > a {
 		width: 250px;
 		height: 150px;
 		margin: 2px;
@@ -89,7 +91,7 @@
 		color: white;
 		padding: 5px 0px 0px 10px;
 	}
-	header + div + div > div:hover {
+	header + div + div > a:hover {
 		cursor: pointer;
 		transform: scale(1.05);
 	}

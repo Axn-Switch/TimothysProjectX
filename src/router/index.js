@@ -63,6 +63,10 @@ const routes = [
 		name: 'passwordreset',
 		component: passwordreset,
 	},
+	{
+		path: '/watch/:id',
+		component: watch,
+	},
 
 	// catch all unregistered routes
 	{

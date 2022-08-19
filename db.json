@@ -99,5 +99,14 @@
       "password": "tika123",
       "role": "user"
     }
+  ],
+  "watching":[
+    {
+      "id": "Fly Fishing",
+      "Channel_Name": "Fly Fishing",
+      "Image": "https://images.pexels.com/photos/13146110/pexels-photo-13146110.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "asofasdifasdhfa",
+      "link": "https://www.youtube.com"
+    }
   ]
 }

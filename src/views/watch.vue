@@ -26,6 +26,8 @@
 <script setup>
 	import axios from 'axios'
 	import { onMounted, ref } from 'vue'
+	import popup from '../components/popup.vue'
+	import { useRouter } from 'vue-router'
 
 	const popups = ref(false)
 	const broadcasts = ref([])
